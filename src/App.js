@@ -11,6 +11,7 @@ class App extends Component {
       notes: []
     }
   }
+
   createNote(title, text) {
     const newNote = { title, text }
     const newNoteList = [...this.state.notes, newNote]
@@ -18,11 +19,20 @@ class App extends Component {
     this.setState(newState)
   }
 
+  deleteNote (index) {
+    const notes = this.state.notes
+    notes.splice(index, 1)
+    this.setState({ notes })
+  }
+
   render() {
     return (
       <section className="conteudo">
         <RegistrationForm createNote={this.createNote.bind(this)} />
-        <NoteList notes={this.state.notes} />
+        <NoteList
+          notes={this.state.notes}
+          deleteNote={this.deleteNote.bind(this)}
+        />
       </section>
     )
   }
