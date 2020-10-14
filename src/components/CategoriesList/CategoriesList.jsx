@@ -23,8 +23,8 @@ class CategoriesList extends Component {
         </ul>
         <input
           type="text"
-          className="lista-categorias_input"
-          placeholder="Adicionar Categoria"
+          className="categories-list_input"
+          placeholder="Add Category"
           onKeyUp={this.handleInputEvent.bind(this)}
         />
       </section>

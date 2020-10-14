@@ -12,7 +12,7 @@
 }
 
 .categories-list_item {
-  background-color: var(--secundaria);
+  background-color: var(--secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 10px;
