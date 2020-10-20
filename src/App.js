@@ -18,17 +18,17 @@ class App extends Component {
     return (
       <section className="conteudo">
         <RegistrationForm
-          categories={this.categories.categories}
-          createNote={this.notes.createNote}
+          categories={this.categories}
+          createNote={this.notes.createNote.bind(this.notes)}
         />
         <main className="main-content">
           <CategoriesList
-            categories={this.categories.categories}
-            addCategory={this.categories.addCategory}
+            categories={this.categories}
+            addCategory={this.categories.addCategory.bind(this.categories)}
           />
           <NoteList
-            notes={this.notes.notes}
-            deleteNote={this.notes.deleteNote}
+            notes={this.notes}
+            deleteNote={this.notes.deleteNote.bind(this.notes)}
           />
         </main>
       </section>
